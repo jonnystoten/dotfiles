@@ -1,0 +1,57 @@
+[user]
+  name = Jonny Stoten
+  email = jonny@rocketmakers.com
+
+[core]
+  autocrlf = input                          # check in unix line endings
+  excludesfile = ~/.gitexcludes
+  pager = "diff-so-fancy | less --tabs=4 -RFX"
+[help]
+  autocorrect = 1
+[http]
+  postBuffer = 524288000                    # max post size for large files
+
+[alias]                                     # some useful aliases :)
+  ru = remote update --prune
+  su = submodule update --recursive
+  graph = log --oneline --graph --decorate
+  whereis = branch -a --contains
+  rbc = rebase --continue
+  st = status --short --branch
+  news = log -p @{1}..
+  standup = log --since yesterday --author Jonny
+  standup-monday = log --since 'last friday' --author Jonny
+
+[branch]
+  autosetupmerge = true           # set up tracking branches automatically
+[push]
+  default = upstream              # `git push` pushes to tracked remote of current branch only
+[pull]
+  rebase = true                   # rebase instead if merge when pulling
+
+[diff]
+  tool = bcomp
+  guitool = bcomp
+  ignoreSubmodules = dirty        # only show submodules as changed if their HEAD moves
+  compactionHeuristic = true
+[merge]
+  tool = bcomp
+  ff = false                      # use --no-ff (no fast-forward) by default when merging
+  conflictstyle = diff3           # include base content in merge conflicts
+  renamelimit = 10000             # number of files to check for file moves/renames
+[rerere]
+  enabled = true                  # 'reuse recorded resolution' -- saves the results of all merge conflict, so you never have to do them twice
+
+[difftool]
+  prompt = false
+[mergetool]
+  prompt = false
+  keepBackup = false              # don't save those annoying .orig files when there's a merge conflict
+[difftool "bcomp"]
+  trustExitCode = true
+  cmd = "/usr/local/bin/bcomp" "$LOCAL" "$REMOTE"
+[mergetool "bcomp"]
+  trustExitCode = true
+  cmd = "/usr/local/bin/bcomp" "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+[commit]
+	verbose = true

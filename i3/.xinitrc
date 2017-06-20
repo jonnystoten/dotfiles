@@ -1,5 +1,5 @@
 #!/bin/bash
 
-export TERMINAL=termite
+export TERMINAL=urxvt
 
 exec i3

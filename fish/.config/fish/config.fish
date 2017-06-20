@@ -1,3 +1,8 @@
-status --is-interactive; and source (nodenv init -|psub)
+if status is-interactive
+  source (nodenv init -|psub)
+end
 
 set -x GOPATH $HOME/code/go
+
+alias yao "yaourt"
+alias dc "docker-compose"

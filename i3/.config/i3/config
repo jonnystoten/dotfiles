@@ -221,11 +221,12 @@ focus_follows_mouse no
 
 exec_always xrdb ~/.Xresources
 exec --no-startup-id compton
-#exec --no-startup-id redshift
+exec --no-startup-id wicd-client --tray
+exec --no-startup-id redshift-gtk
+exec --no-startup-id pasystray
 exec_always --no-startup-id feh --bg-scale --randomize ~/wallpaper
 exec firefox
 exec slack
-exec wicd-client --tray
 
 # Spotify opens on the wrong workspace...
 #exec spotify

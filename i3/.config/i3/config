@@ -177,6 +177,18 @@ mode "open" {
 
 bindsym $mod+o mode "open"
 
+mode "power" {
+  bindsym $mod+p exec --no-startup-id systemctl poweroff; mode "default"
+  bindsym $mod+r exec --no-startup-id systemctl reboot; mode "default"
+  bindsym $mod+s exec --no-startup-id systemctl suspend; mode "default"
+
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+bindsym $mod+p mode "power"
+
 set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5

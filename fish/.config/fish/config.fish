@@ -3,6 +3,8 @@ if status is-interactive
 end
 
 set -x GOPATH $HOME/code/go
+set -x VISUAL vim
+set -x EDITOR $VISUAL
 
 alias yao "yaourt"
 alias dc "docker-compose"

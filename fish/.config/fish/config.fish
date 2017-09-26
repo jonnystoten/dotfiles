@@ -5,6 +5,7 @@ end
 set -x GOPATH $HOME/code/go
 set -x VISUAL vim
 set -x EDITOR $VISUAL
+set -x GTK_SCALE 2
 
 alias yao "yaourt"
 alias dc "docker-compose"

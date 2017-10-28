@@ -1,0 +1,48 @@
+cask_args appdir: "/Applications"
+tap "caskroom/cask"
+tap "caskroom/versions"
+tap "caskroom/fonts"
+tap "microsoft/mssql-release"
+
+brew "mas"
+
+cask "font-fira-code"
+
+brew "fish"
+brew "git"
+brew "diff-so-fancy"
+
+brew "macvim"
+brew "httpie"
+
+brew "mpv"
+
+brew "yarn"
+brew "nodenv"
+brew "rbenv"
+
+brew "terraform"
+brew "azure-cli"
+brew "kubectl"
+cask "docker"
+
+brew "elixir"
+
+cask "java"
+brew "flyway"
+brew "postgresql"
+brew "mssql-tools"
+cask "valentina-studio"
+
+cask "firefox"
+cask "firefoxdeveloperedition"
+cask "google-chrome"
+
+cask "postman"
+
+cask "iterm2"
+cask "visual-studio-code"
+cask "slack"
+
+cask "spotify"
+cask "steam"

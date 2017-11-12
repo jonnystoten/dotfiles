@@ -1,10 +1,9 @@
 function reboot_check
-
   set nextline 0
-  set find ""
+  set disk_kernel ""
   for i in (string split " " (file /boot/vmlinuz*))
     if [ $nextline = 1 ]
-      set find $i
+      set disk_kernel $i
       break
     else
       if [ $i = "version" ]
@@ -13,9 +12,12 @@ function reboot_check
     end
   end
 
-  if [ $find != "" ]
+  if [ $disk_kernel = "" ]
+    # couldn't find the installed kernel version
+    false
+  else
     set current_kernel (uname -r)
-    if [ $current_kernel != $find ]
+    if [ $current_kernel != $disk_kernel ]
       true
     else
       false

@@ -6,7 +6,7 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
 
-URxvt.font: xft:monospace:pixelsize=28
+URxvt.font: xft:Fira Code:pixelsize=28
 URxvt.letterSpace: -1
 URxvt.scrollBar: false
 

@@ -166,7 +166,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 mode "open" {
-  bindsym $mod+f exec firefox; mode "default"
+  bindsym $mod+f exec firefox-developer; mode "default"
   bindsym $mod+e exec emacsclient -nc; mode "default"
   bindsym $mod+s exec spotify --force-device-scale-factor=1.5; mode "default"
 
@@ -225,8 +225,8 @@ exec --no-startup-id wicd-client --tray
 exec --no-startup-id redshift-gtk
 exec --no-startup-id pasystray
 exec_always --no-startup-id feh --bg-scale --randomize ~/wallpaper
-exec firefox
-exec slack
+#exec firefox-developer
+#exec slack
 
 # Spotify opens on the wrong workspace...
 #exec spotify

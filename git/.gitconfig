@@ -21,6 +21,7 @@
   news = log -p @{1}..
   standup = log --since yesterday --author Jonny
   standup-monday = log --since 'last friday' --author Jonny
+  git = !git
 
 [branch]
   autosetupmerge = true           # set up tracking branches automatically

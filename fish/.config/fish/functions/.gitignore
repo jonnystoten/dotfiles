@@ -1,0 +1,4 @@
+*
+!.gitignore
+!upgrade.fish
+!reboot_check.fish

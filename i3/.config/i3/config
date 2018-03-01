@@ -227,7 +227,7 @@ exec_always xrdb ~/.Xresources
 exec --no-startup-id compton
 exec --no-startup-id wicd-client --tray
 exec --no-startup-id redshift-gtk
-exec --no-startup-id pasystray
+exec --no-startup-id pa-applet
 exec_always --no-startup-id feh --bg-scale --randomize ~/wallpaper
 #exec firefox-developer
 #exec slack

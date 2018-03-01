@@ -2,6 +2,7 @@ if status is-interactive
   source (nodenv init -|psub)
 end
 
+set -x TERMINAL termite
 set -x GOPATH $HOME/code/go
 set -x VISUAL vim
 set -x EDITOR $VISUAL

@@ -24,6 +24,8 @@
   standup-monday = log --since 'last friday' --author Jonny
   git = !git
 
+[commit]
+  gpgsign = true
 [branch]
   autosetupmerge = true           # set up tracking branches automatically
 [push]

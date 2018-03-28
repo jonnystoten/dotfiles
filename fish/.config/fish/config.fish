@@ -1,4 +1,7 @@
+set -x PATH $PATH $HOME/.rbenv/bin
+
 if status is-interactive
+  source (rbenv init -|psub)
   source (nodenv init -|psub)
 end
 
@@ -13,6 +16,9 @@ alias dc "docker-compose"
 alias vi "vim"
 alias v "vim"
 alias e "emacsclient -nc"
+alias rake "bundle exec rake"
+alias rspec "bundle exec rspec"
+alias rails "bundle exec rails"
 
 if reboot_check
   echo "The kernel is out of date, it's time to reboot!"

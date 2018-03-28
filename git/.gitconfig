@@ -1,6 +1,7 @@
-[user]
-  name = Jonny Stoten
-  email = jonny@rocketmakers.com
+[includeIf "gitdir:~/code/"]
+  path = .gitconfig-personal
+[includeIf "gitdir:~/code/pirate-studios/"]
+  path = .gitconfig-work
 
 [core]
   autocrlf = input                          # check in unix line endings

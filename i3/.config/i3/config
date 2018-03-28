@@ -176,7 +176,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 mode "open" {
-  bindsym $mod+f exec firefox-developer-edition; mode "default"
+  bindsym $mod+f exec firefox; mode "default"
   bindsym $mod+e exec emacsclient -nc; mode "default"
   bindsym $mod+s exec spotify --force-device-scale-factor=1.5; mode "default"
 

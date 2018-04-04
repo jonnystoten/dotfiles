@@ -199,6 +199,18 @@ mode "power" {
 
 bindsym $mod+p mode "power"
 
+mode "screenshot" {
+  bindsym c exec --no-startup-id fish -c screencast; mode "screencasting"
+
+  bindsym Escape mode "default"
+}
+
+mode "screencasting" {
+  bindsym Print exec --no-startup-id killall ffmpeg; mode "default"
+}
+
+bindsym Print exec --no-startup-id fish -c screenshot; mode "screenshot"
+
 set $bg-color 	         #6f747f
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5

@@ -2,3 +2,5 @@
 !.gitignore
 !upgrade.fish
 !reboot_check.fish
+!screenshot.fish
+!screencast.fish

@@ -1,5 +1,6 @@
-[includeIf "gitdir:~/code/"]
-  path = .gitconfig-personal
+[user]
+  name = Jonny Stoten
+  email = jonny@jonnystoten.com
 [includeIf "gitdir:~/code/pirate-studios/"]
   path = .gitconfig-work
 

@@ -2,6 +2,7 @@
 !.gitignore
 !upgrade.fish
 !reboot_check.fish
+!grab.fish
 !screenshot.fish
 !screencast.fish
 !piratepass.fish

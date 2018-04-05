@@ -4,7 +4,7 @@ function screencast
 
   trap "rm -f $tmpfile" EXIT
 
-  slop -f "%x %y %w %h" | read x y w h
+  grab | read x y w h
   ffmpeg -f x11grab -s {$w}x{$h} -i :0.0+$x,$y $tmpfile
 
   ffmpeg -y -i $tmpfile -vf fps=10,palettegen /tmp/palette.png

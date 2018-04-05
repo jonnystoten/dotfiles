@@ -1,8 +1,9 @@
 *
 !.gitignore
-!upgrade.fish
-!reboot_check.fish
 !grab.fish
+!lockscreen.fish
+!piratepass.fish
+!reboot_check.fish
 !screenshot.fish
 !screencast.fish
-!piratepass.fish
+!upgrade.fish

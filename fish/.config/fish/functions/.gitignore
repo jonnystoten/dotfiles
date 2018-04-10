@@ -4,6 +4,7 @@
 !lockscreen.fish
 !piratepass.fish
 !reboot_check.fish
-!screenshot.fish
 !screencast.fish
+!screenshot.fish
+!screensize.fish
 !upgrade.fish

@@ -1,6 +1,6 @@
 function lockscreen
   set tmpfile (mktemp -t -u lock-XXX.png)
-  set lockicon ~/Downloads/padlock-512.png
+  set lockicon ~/.config/lock.png
 
   set scale 10
   set down (math -s 3 "100 / $scale")%

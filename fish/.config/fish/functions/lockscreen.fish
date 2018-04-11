@@ -2,7 +2,7 @@ function lockscreen
   set tmpfile (mktemp -t -u lock-XXX.png)
   set lockicon ~/.config/lock.png
 
-  set scale 10
+  set scale $argv
   set down (math -s 3 "100 / $scale")%
   set up (math -s 3 "100 * $scale")%
 

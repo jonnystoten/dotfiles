@@ -1,6 +1,8 @@
 set -x PATH $PATH $HOME/.rbenv/bin
 set -x PATH $PATH $HOME/code/flutter/bin $HOME/Android/Sdk/platform-tools
 
+eval (dircolors -c ~/.config/dircolors)
+
 if status is-interactive
   source (rbenv init -|psub)
   source (nodenv init -|psub)

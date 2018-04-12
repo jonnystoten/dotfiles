@@ -6,6 +6,7 @@ if status is-interactive
 end
 
 set -x TERMINAL termite
+set -x GPG_TTY (tty)
 set -x GOPATH $HOME/code/go
 set -x VISUAL vim
 set -x EDITOR $VISUAL

@@ -10,6 +10,11 @@ function lockscreen
   convert $tmpfile -scale $down -scale $up $tmpfile
   convert $tmpfile $lockicon -gravity center -composite -matte $tmpfile
 
+  playerctl pause
+
+  # require password on next sudo
+  sudo -K
+
   i3lock -n -u -i $tmpfile
 
   rm $tmpfile

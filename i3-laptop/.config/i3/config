@@ -247,7 +247,7 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id syncthing-gtk
 exec --no-startup-id pa-applet
 exec --no-startup-id twmnd
-exec_always --no-startup-id feh --bg-scale --randomize ~/wallpaper
+exec_always --no-startup-id feh --bg-fill --randomize ~/wallpaper
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #exec slack
 

@@ -1,3 +1,3 @@
 function upgrade
-  yaourt -Syu --aur
+  pikaur -Syu
 end

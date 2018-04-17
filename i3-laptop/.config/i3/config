@@ -22,7 +22,7 @@ font pango:sans 10
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
-#for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 
 #gaps inner 10
 #gaps outer 10

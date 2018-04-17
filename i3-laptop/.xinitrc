@@ -1,5 +1,6 @@
 #!/bin/bash
 
-export TERMINAL=urxvt
+# required for dunst
+systemctl --user import-environment DISPLAY
 
 exec i3

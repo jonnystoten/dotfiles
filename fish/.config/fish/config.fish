@@ -24,7 +24,7 @@ if reboot_check
   echo "The kernel is out of date, it's time to reboot!"
 end
 
-if not pgrep --ns 0 -u "$USER" ssh-agent > /dev/null
+if not pgrep -u "$USER" ssh-agent > /dev/null
   ssh-agent -c > ~/.ssh-agent-thing
 end
 if [ "$SSH_AGENT_PID" = "" ]

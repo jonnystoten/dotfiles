@@ -194,7 +194,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 mode "open" {
-  bindsym $mod+f exec firefox; mode "default"
+  bindsym $mod+f exec env MOZ_USE_XINPUT2=1 firefox; mode "default"
   bindsym $mod+e exec emacsclient -nc; mode "default"
   bindsym $mod+s exec spotify; mode "default"
 

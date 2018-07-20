@@ -104,6 +104,22 @@ set $workspace8 "8"
 set $workspace9 "9 "
 set $workspace10 "10 "
 
+set $external DP-1
+set $laptop eDP-1
+
+workspace $workspace1 output $laptop
+workspace $workspace2 output $laptop
+workspace $workspace3 output $external
+workspace $workspace4 output $external
+workspace $workspace5 output $external
+workspace $workspace6 output $external
+workspace $workspace7 output $laptop
+workspace $workspace8 output $laptop
+workspace $workspace9 output $laptop
+workspace $workspace10 output $laptop
+
+bindsym $mod+x move workspace to output left
+
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2

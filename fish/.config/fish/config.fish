@@ -31,7 +31,7 @@ if not pgrep -u "$USER" ssh-agent > /dev/null
   ssh-agent -c > ~/.ssh-agent-thing
 end
 if [ "$SSH_AGENT_PID" = "" ]
-  eval (cat ~/.ssh-agent-thing)
+  eval (cat ~/.ssh-agent-thing) > /dev/null
 end
 
 if status is-login

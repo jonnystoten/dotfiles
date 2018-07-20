@@ -1,5 +1,6 @@
 #!/bin/bash
 
-export TERMINAL=urxvt
+export TERMINAL=kitty
 
-exec i3
+#exec i3
+exec startkde

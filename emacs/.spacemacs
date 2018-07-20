@@ -148,7 +148,7 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Fira Mono"
+   dotspacemacs-default-font '("monospace"
                                :size 14.0
                                :weight normal
                                :width normal
@@ -353,6 +353,8 @@ you should place your code here."
 
   (setq epa-pinentry-mode 'loopback)
   (pinentry-start)
+
+  (setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
 
   )
 

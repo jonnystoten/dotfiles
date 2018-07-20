@@ -5,6 +5,8 @@ if status is-interactive
   source (nodenv init -|psub)
 end
 
+set -x PATH $PATH /home/jonny/.local/bin
+
 set -x TERMINAL termite
 set -x GPG_TTY (tty)
 set -x GOPATH $HOME/code/go

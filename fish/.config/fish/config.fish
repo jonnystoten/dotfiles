@@ -3,6 +3,7 @@ eval (dircolors -c ~/.config/dircolors)
 if status is-interactive
   source (rbenv init -|psub)
   source (nodenv init -|psub)
+  source ~/.asdf/asdf.fish
 end
 
 set -x PATH $PATH /home/jonny/.local/bin

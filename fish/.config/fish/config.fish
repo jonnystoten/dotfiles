@@ -21,6 +21,7 @@ alias e "emacsclient -nc"
 alias rake "bundle exec rake"
 alias rspec "bundle exec rspec"
 alias rails "bundle exec rails"
+alias git=hub
 
 if reboot_check
   echo "The kernel is out of date, it's time to reboot!"

@@ -1,3 +1,4 @@
 function upgrade
-  pikaur -Syu
+  aur -u
+  sudo pacman -Syu
 end

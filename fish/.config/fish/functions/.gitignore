@@ -1,5 +1,7 @@
 *
 !.gitignore
+!aur.fish
+!aur_rm.fish
 !grab.fish
 !lockscreen.fish
 !piratepass.fish

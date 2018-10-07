@@ -10,7 +10,7 @@ function aur_rm
     # as that could cause packages to be deleted before they're
     # uploaded!
     set self_command fish -c "aur_rm $argv"
-    env flocker=1 flock --verbose -xn $local_path/aursync.lock $self_command
+    env flocker=1 flock -xn $local_path/aursync.lock $self_command
     return
   end
 

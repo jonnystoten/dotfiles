@@ -1,4 +1,4 @@
-function aur_rm
+function aurrm
   set remote_path s3://jonnystoten-arch/repo/x86_64
   set local_path $HOME/.local/share/arch-repo
   set repo_name jonnystoten

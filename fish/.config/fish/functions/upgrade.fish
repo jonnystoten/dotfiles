@@ -1,4 +1,4 @@
 function upgrade
-  aur -u
+  aursync -u
   sudo pacman -Syu
 end

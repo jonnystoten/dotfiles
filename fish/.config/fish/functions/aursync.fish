@@ -1,4 +1,4 @@
-function aur
+function aursync
   set remote_path s3://jonnystoten-arch/repo/x86_64
   set local_path $HOME/.local/share/arch-repo
   set repo_name jonnystoten
@@ -9,7 +9,7 @@ function aur
     # Grab an exlusive lock so we don't try running this twice
     # as that could cause packages to be deleted before they're
     # uploaded!
-    set self_command fish -c "aur $argv"
+    set self_command fish -c "aursync $argv"
     env flocker=1 flock -xn $local_path/aursync.lock $self_command
     return
   end
@@ -23,7 +23,7 @@ function aur
   set packages $local_path/*.pkg.tar.xz
   rm -f $packages
 
-  aursync --repo $repo_name --root $local_path $argv; or true
+  aur sync --database $repo_name --root $local_path $argv; or true
 
   # Sync local db to remote
   set packages $local_path/*.pkg.tar.xz

@@ -34,7 +34,7 @@
 [branch]
   autosetupmerge = true           # set up tracking branches automatically
 [push]
-  default = upstream              # `git push` pushes to tracked remote of current branch only
+  default = current               # `git push` pushes to branch with the same name on remote
   followTags = true
 [pull]
   rebase = true                   # rebase instead if merge when pulling

@@ -14,7 +14,6 @@ set -x GOPATH $HOME/code/go
 set -x VISUAL vim
 set -x EDITOR $VISUAL
 
-alias pik "pikaur"
 alias dc "docker-compose"
 alias vi "vim"
 alias v "vim"

@@ -1,0 +1,46 @@
+{
+  // Place your settings in this file to overwrite the default settings
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "disableLigatures.mode": "Line",
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.trimAutoWhitespace": false,
+  "editor.renderWhitespace": "boundary",
+  "editor.renderIndentGuides": false,
+  "editor.tabSize": 2,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "dark+(elixir)",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.showTabs": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "window.zoomLevel": 2,
+  "extensions.ignoreRecommendations": true,
+  "prettier.printWidth": 120,
+  "prettier.trailingComma": "all",
+  "prettier.disableLanguages": ["scss", "typescriptreact"],
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  },
+  "gitlens.keymap": "chorded",
+  "ruby.lint": {
+    "rubocop": true
+  },
+  "[elm]": {
+    "editor.formatOnSave": true
+  },
+  "[elixir]": {
+    "editor.acceptSuggestionOnEnter": "smart"
+  }
+}

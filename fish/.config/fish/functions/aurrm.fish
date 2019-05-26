@@ -9,7 +9,7 @@ function aurrm
     # Grab an exlusive lock so we don't try running this twice
     # as that could cause packages to be deleted before they're
     # uploaded!
-    set self_command fish -c "aur_rm $argv"
+    set self_command fish -c "aurrm $argv"
     env flocker=1 flock -xn $local_path/aursync.lock $self_command
     return
   end

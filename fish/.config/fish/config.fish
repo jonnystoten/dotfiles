@@ -5,7 +5,7 @@ if status is-interactive
   source ~/.asdf/asdf.fish
 end
 
-set -x PATH $PATH /home/jonny/.local/bin
+set -x PATH $PATH $HOME/.local/bin
 
 set -x TERMINAL termite
 set -x GPG_TTY (tty)
@@ -20,7 +20,7 @@ alias e "emacsclient -nc"
 alias rake "bundle exec rake"
 alias rspec "bundle exec rspec"
 alias rails "bundle exec rails"
-alias git=hub
+alias git "hub"
 
 if reboot_check
   echo "The kernel is out of date, it's time to reboot!"

@@ -3,5 +3,9 @@
   {
     "key": "ctrl+alt+meta+l",
     "command": "workbench.action.reloadWindow"
+  },
+  {
+    "key": "ctrl+[",
+    "command": "workbench.action.navigateBack"
   }
 ]

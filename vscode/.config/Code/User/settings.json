@@ -17,6 +17,8 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "window.zoomLevel": 2,
+  "window.menuBarVisibility": "toggle",
+  "window.titleBarStyle": "custom",
   "extensions.ignoreRecommendations": true,
   "prettier.printWidth": 120,
   "prettier.trailingComma": "all",
@@ -37,10 +39,14 @@
   "ruby.lint": {
     "rubocop": true
   },
-  "[elm]": {
-    "editor.formatOnSave": true
-  },
   "[elixir]": {
-    "editor.acceptSuggestionOnEnter": "smart"
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.wordBasedSuggestions": false,
+    "editor.formatOnType": true,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.trimAutoWhitespace": false,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true
   }
 }

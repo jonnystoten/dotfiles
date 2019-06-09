@@ -1,8 +1,7 @@
 eval (dircolors -c ~/.config/dircolors)
 
 if status is-interactive
-  source (rbenv init -|psub)
-  source ~/.asdf/asdf.fish
+  source /opt/asdf-vm/asdf.fish
 end
 
 set -x PATH $PATH $HOME/.local/bin
@@ -24,6 +23,12 @@ alias git "hub"
 
 if reboot_check
   echo "The kernel is out of date, it's time to reboot!"
+end
+
+if not functions -q fisher
+  set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+  curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+  fish -c fisher
 end
 
 if not pgrep -u "$USER" ssh-agent > /dev/null

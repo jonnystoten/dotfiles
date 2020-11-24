@@ -1,7 +1,7 @@
 [user]
   name = Jonny Stoten
   email = jonny@jonnystoten.com
-[includeIf "gitdir:~/code/pirate-studios/"]
+[includeIf "gitdir:~/code/docker/"]
   path = .gitconfig-work
 
 [core]
@@ -14,6 +14,11 @@
   postBuffer = 524288000                    # max post size for large files
 [interactive]
   singleKey = true
+[protocol]
+  version = 2
+
+[url "git@github.com:"]
+ insteadOf = https://github.com/
 
 [alias]                                     # some useful aliases :)
   ru = remote update --prune
@@ -25,6 +30,7 @@
   news = log -p @{1}..
   standup = log --since yesterday --author Jonny
   standup-monday = log --since 'last friday' --author Jonny
+  sync = !hub sync
   git = !git
 
 [commit]
@@ -38,6 +44,8 @@
   followTags = true
 [pull]
   rebase = true                   # rebase instead if merge when pulling
+[remote]
+  pushDefault = origin
 
 [diff]
   ignoreSubmodules = dirty        # only show submodules as changed if their HEAD moves

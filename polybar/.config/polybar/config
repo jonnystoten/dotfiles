@@ -20,8 +20,9 @@ alert = #e53935
 
 [bar/bottom]
 ;monitor = ${env:MONITOR:HDMI-1}
+dpi = 144
 width = 100%
-height = 27
+height = 38
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
@@ -45,7 +46,7 @@ module-margin-right = 2
 
 font-0 = sans:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = Wuncon Siji:pixelsize=10;1
+font-2 = Siji:pixelsize=10;1
 font-3 = Font Awesome 5 Free:style=Solid:pixelsize=10;1
 font-4 = Font Awesome 5 Brands:pixelsize=10;1
 
@@ -97,7 +98,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-mount-1 = /home
+mount-1 = /data
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
@@ -209,7 +210,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp58s0
+interface = wlp5s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -247,19 +248,19 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
-date =
-date-alt = " %Y-%m-%d"
+date = %Y-%m-%d
+date-alt = %a %Y-%m-%d
 
-time = %H:%M
-time-alt = %H:%M:%S
+time = %H:%M %Z
+time-alt = %H:%M:%S %Z
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
-label = %date% %time%
+label = " %date% %time%"
 
 [module/volume]
 type = internal/volume

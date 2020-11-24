@@ -27,6 +27,7 @@ function aurrm
 
   for package in $argv
     s3cmd rm "$remote_path/$package-*.pkg.tar.xz"
+    s3cmd rm "$remote_path/$package-*.pkg.tar.zst"
   end
 end
 

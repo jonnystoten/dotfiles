@@ -20,13 +20,13 @@ function aursync
   ln -sf $repo_name.files.tar.xz $local_path/$repo_name.files
 
   # Clean up older packages
-  set packages $local_path/*.pkg.tar.xz
+  set packages $local_path/*.pkg.tar.zst
   rm -f $packages
 
   aur sync --database $repo_name --root $local_path $argv; or true
 
   # Sync local db to remote
-  set packages $local_path/*.pkg.tar.xz
+  set packages $local_path/*.pkg.tar.zst
   s3cmd sync --follow-symlinks --acl-public \
     $packages \
     $local_path/$repo_name.{db,files}{,.tar.xz} \

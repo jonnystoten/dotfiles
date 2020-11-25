@@ -34,13 +34,6 @@ if not functions -q fisher
   fish -c fisher
 end
 
-if not pgrep -u "$USER" ssh-agent > /dev/null
-  ssh-agent -c > ~/.ssh-agent-thing
-end
-if [ "$SSH_AGENT_PID" = "" ]
-  eval (cat ~/.ssh-agent-thing) > /dev/null
-end
-
 if status is-login
   if test -z "$DISPLAY" -a $XDG_VTNR = 1
     exec startx
@@ -48,6 +41,9 @@ if status is-login
 else if status is-interactive
   source /opt/asdf-vm/asdf.fish
   #taoup-fortune
+
+  keychain --quiet ~/.ssh/id_ed25519
+  source ~/.keychain/drake-fish
 
   if reboot_check
     echo "The kernel is out of date, it's time to reboot!"

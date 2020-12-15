@@ -40,10 +40,8 @@ if status is-login
   end
 else if status is-interactive
   source /opt/asdf-vm/asdf.fish
-  #taoup-fortune
 
-  keychain --quiet ~/.ssh/id_ed25519
-  source ~/.keychain/drake-fish
+  eval (keychain --eval --quiet --noask ~/.ssh/id_ed25519)
 
   if reboot_check
     echo "The kernel is out of date, it's time to reboot!"

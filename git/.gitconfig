@@ -7,7 +7,7 @@
 [core]
   autocrlf = input                          # check in unix line endings
   excludesfile = ~/.gitexcludes
-  pager = "diff-so-fancy | less --tabs=4 -RFX"
+  pager = delta
 [help]
   autocorrect = 1
 [http]
@@ -27,18 +27,23 @@
   whereis = branch -a --contains
   rbc = rebase --continue
   st = status --short --branch
+  cp = cherry-pick
   news = log -p @{1}..
-  standup = log --since yesterday --author Jonny
-  standup-monday = log --since 'last friday' --author Jonny
+  standup = log --since '2pm yesterday' --author Jonny
+  standup-monday = log --since '2pm last friday' --author Jonny
   sync = !hub sync
   git = !git
 
+[init]
+  defaultBranch = main
 [commit]
   gpgsign = true
 [tag]
   forceSignAnnotated = true
 [branch]
   autosetupmerge = true           # set up tracking branches automatically
+[rebase]
+  autoSquash = true
 [push]
   default = current               # `git push` pushes to branch with the same name on remote
   followTags = true
@@ -56,3 +61,22 @@
   renamelimit = 10000             # number of files to check for file moves/renames
 [rerere]
   enabled = true                  # 'reuse recorded resolution' -- saves the results of all merge conflict, so you never have to do them twice
+[color]
+  ui = true
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+[color "diff"]
+  meta = yellow
+  frag = magenta bold
+  commit = yellow bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
+[delta]
+  line-numbers = true
+#  side-by-side = true
+  pager = less -RX
+  paging = always
